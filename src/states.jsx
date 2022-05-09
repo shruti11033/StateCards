@@ -28,7 +28,7 @@ class States extends Component {
             let dir = this.props.sortDir; // -1 is descending, 1 is ascending
             this.setState({
                 states: this.state.states.sort(function (a, b) {
-                    return a.state > b.state ? 1 * dir : -1 * dir;
+                    return a.population_rank > b.population_rank ? 1 * dir : -1 * dir;
                 })
             });
         }
@@ -61,6 +61,7 @@ class States extends Component {
                                     <p>Code: {state.code}</p>
                                     <p>Capital: {state.capital_city}</p>
                                     <p>Population: {state.population}</p>
+                                    <p>Population Rank: {state.population_rank}</p>
                                 </div>
                               </div>
                         );
